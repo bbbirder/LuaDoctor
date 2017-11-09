@@ -1,0 +1,13 @@
+<res>
+   <item name="main/bgButton.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=5,5,5,5" picType="0"/>
+   <item name="main/bgButton2.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=5,5,5,5" picType="0"/>
+   <item name="main/btn_none.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=8,8,8,8" picType="0"/>
+   <item name="main/btn_plain.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=3,3,3,3" picType="0"/>
+   <item name="main/btn_light_blue.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=6,6,6,6@@!@@labelColors=#e0e0e0,#e0e0e0,#e0e0e0" picType="0"/>
+   <item name="main/btn_blue.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=6,6,6,6@@!@@labelColors=#e0e0e0,#e0e0e0,#e0e0e0" picType="0"/>
+   <item name="main/btn_green.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=6,6,6,6@@!@@labelColors=#e0e0e0,#e0e0e0,#e0e0e0" picType="0"/>
+   <item name="main/btn_light_green.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=6,6,6,6@@!@@labelColors=#e0e0e0,#e0e0e0,#e0e0e0" picType="0"/>
+   <item name="main/btn_red.png" type="Button" compress="0" pack="0" quality="80" props="sizeGrid=6,6,6,6@@!@@labelColors=#e0e0e0,#e0e0e0,#e0e0e0" picType="0"/>
+   <item name="main/img_win.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=31,6,6,6" picType="0"/>
+   <item name="main/bgButton3.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=5,5,5,5" picType="0"/>
+</res>
