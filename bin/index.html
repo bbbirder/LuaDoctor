@@ -11,7 +11,13 @@
 	<meta name='360-fullscreen' content='true' />
 	<meta http-equiv='expires' content='0' />
 </head>
-<body style="cursor:hand">
+<body style="cursor:hand;overflow-x: hidden" bgColor="#121212">
+	<div style="-webkit-app-region: drag;z-index:100;right:90px;position: absolute;left:72px;height:30px"></div>
+	<div id="loading" style="position: absolute;width:100%;text-align: center;height:92px;top:45%;z-index: 9999999;-webkit-user-select: none">
+	<img src="loading.gif" width="92px" height="92px"></img>
+	</div>
+	<!--;-webkit-app-region: drag;-webkit-user-select: none-->
+	<!--<img src="blank.png" style="width:100%;height:100%;"></img>-->
 	 <!-- Protobuf -->
     <!--<script type="text/javascript" src="libs/bytebuffer.js"></script>
     <script type="text/javascript" src="libs/protobuf.js"></script>-->
@@ -39,6 +45,7 @@
 	<!--自定义的js(bin/js文件夹下)文件自动添加到下面jsfile模块标签里面里，js的顺序可以手动修改，修改后保留修改的顺序，新增加的js会默认依次追加到标签里-->
 	<!--删除标签，ide不会自动添加js文件，请谨慎操作-->
 	<!--jsfile--startTag-->
+	<script src="../src/DeviceChooseView.js"></script>
 	<script src="../src/common.js"></script>
 	<script src="../src/initDebugView.js"></script>
 	<script src="../src/LogRow.js"></script>
@@ -49,6 +56,6 @@
 	<script src="../src/MainView.js"></script>
 	<script src="../src/LayaUISample.js"></script>
 	<!--jsfile--endTag-->
-	<span style="font:14px Arial">--[[&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;DEPRACETED.&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;fucked&nbsp;a&nbsp;dog&nbsp;for&nbsp;the&nbsp;terrible&nbsp;coding!&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;self.co&nbsp;=&nbsp;(self.co&nbsp;and&nbsp;self.co.resume())&nbsp;or&nbsp;waitfor(3,callback)&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>]]</span>
+
 </body>
 </html>

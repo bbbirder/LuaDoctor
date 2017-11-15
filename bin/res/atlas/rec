@@ -1,4 +1,4 @@
-/Users/cy0104/Documents/LuaDoctor/laya/assets/.DS_Store:1510028409
+/Users/cy0104/Documents/LuaDoctor/laya/assets/.DS_Store:1510566357
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/bg.png:1473448626
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/blank.png:1473448626
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/btn_close.png:1473448626
@@ -32,7 +32,7 @@
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/vscroll.png:1473448626
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/vslider$bar.png:1473448626
 /Users/cy0104/Documents/LuaDoctor/laya/assets/comp/vslider.png:1473448626
-/Users/cy0104/Documents/LuaDoctor/laya/assets/main/.DS_Store:1509605154
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/.DS_Store:1510391995
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/bg_border_b.png:1510053346
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/bgButton.png:1509095363
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/bgButton2.png:1509099386
@@ -62,6 +62,7 @@
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/btnHistory.png:1509117091
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/btnOpen.png:1509114237
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/btnPort.png:1509114234
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/cb.png:1510560758
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/hscroll$bar.png:1509339822
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/hscroll$down.png:1473448626
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/hscroll$up.png:1473448626
@@ -70,17 +71,24 @@
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/icon_doctor.png:1509096329
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/icon_drag.png:1509107061
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/icon_ui.png:1509097088
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_bp.png:1510316291
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_close.png:1509441675
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_file_1.png:1509450128
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_folder_1.png:1509449912
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_folder_2.png:1509675944
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_fs_1.png:1509443507
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_fs_2.png:1509443660
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_line_red.png:1510316150
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_mobile.png:1510556452
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_push.png:1510388418
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_refresh.png:1510559817
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_win.png:1509440473
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_win_close.png:1510048356
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_win_max.png:1510048369
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_win_min.png:1510048381
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/img_win_resize.png:1510229917
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/imgPrint.png:1509117466
+/Users/cy0104/Documents/LuaDoctor/laya/assets/main/loading.gif:1510309692
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/vscroll$bar.png:1509436776
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/vscroll$down.png:1509436257
 /Users/cy0104/Documents/LuaDoctor/laya/assets/main/vscroll$up.png:1509436355

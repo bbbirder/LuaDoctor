@@ -1,3 +1,4 @@
+const UUID = require("uuid");
 const electron = require('electron');
 // 控制应用生命周期的模块
 const {app} = electron;
@@ -10,8 +11,7 @@ let win;
 
 function createWindow() {
   // 创建一个新的浏览器窗口
-  win = new BrowserWindow({width: 1206, height: 800});//570+50
-
+  win = new BrowserWindow({width: 1206, height: 750, frame: false});//570+50
   // 并且装载应用的index.html页面
   win.loadURL(`file://${__dirname}/../bin/index.html`);
 
@@ -24,7 +24,8 @@ function createWindow() {
     // 存放窗口对象，在窗口关闭的时候应当删除相应的元素。
     win = null;
   });
-  global.win = win;
+  wins[UUID.v1()] = win;
+  // global.win = win;
 }
 
 // 当Electron完成初始化并且已经创建了浏览器窗口，则该方法将会被调用。
@@ -47,6 +48,17 @@ app.on('activate', () => {
   }
 });
 
+global.app = app;
+global.UUID = UUID;
+global.BrowserWindow = BrowserWindow;
+
+//peer_uuid -> peer_instance
+global.peers = {};
+//win_uuid -> win_instance
+global.wins = {};
+
+require("./PingPongMapping")
+global.uidmap = new PingPongMapping()
 
 // 在这个文件后面你可以直接包含你应用特定的由主进程运行的代码。
 // 也可以把这些代码放在另一个文件中然后在这里导入。

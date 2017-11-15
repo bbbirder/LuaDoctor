@@ -3,9 +3,9 @@ var Handler = laya.utils.Handler;
 
 var settings = {
     main_dir:ipcRenderer.sendSync("main_dir"),
-    src_dir:ipcRenderer.sendSync("dump_dir",{
+    src_dir:MyStorage["last_dir"]?ipcRenderer.sendSync("dump_dir",{
         path:MyStorage["last_dir"]
-    }),
+    }):null,
 };
 
 
@@ -20,7 +20,9 @@ function MainView(){
 	MainViewUI.super(this);
     //global listeners
 
-    this.txtTitle.text = MyStorage["last_dir"]
+    this.menuDebug.disabled = !MyStorage["last_dir"];
+    this.menuUI.disabled = !MyStorage["last_dir"];
+    this.txtTitle.text = MyStorage["last_dir"]||"请先打开一个src工程"
     //init menus
     var menus = [this.menuDoctor,this.menuDebug,this.menuUI];
     var subviews = [this.doctorView,this.debugView,this.uiView];
@@ -33,9 +35,26 @@ function MainView(){
         },[i])
         console.log(i)
     }
+    this.menuDebug.on(Event.CHANGE,this,function(e){
+        if(this.menuDebug.selected){
+            var hasPeer = false;
+            console.log(remote.getGlobal("peers"))
+            for(var peer_uuid in remote.getGlobal("peers")){
+                ipcRenderer.send("listen_list_add",{
+                    uuid:peer_uuid
+                })
+                hasPeer = true;
+            }
+            this.debugView.disabled = !hasPeer;
+            this.coverDebug.visible = !hasPeer;
+        }
+    });
 //init doctor
     this.btnOpen.on(Event.CLICK,this,function(){
-        new FileChooseView().show();
+        new FileChooseView(function(){
+            this.menuDebug.disabled = false;
+            this.menuUI.disabled = false;
+        }.bind(this)).show();
     })
     this.on(Event.RESIZE,this,function(){
         this.panDoc.vScrollBar.visible = this.displayHeight<700
@@ -43,13 +62,7 @@ function MainView(){
         // new Laya.Panel().vScrollBar.visible
     })
     this.btnHelp.on(Event.CLICK,this,function(){
-        ws.send({
-            cmd:"lua_string_req",
-            str:
-                "local f1 = io.open(cc.FileUtils:getInstance():getWritablePath()..'/LuaDoctor/test3.lua','w+');f1:write('return {name=\"leo\",hw=function()print(123)end}');f1:close();"+
-                // "local f2 = io.open(cc.FileUtils:getInstance():getWritablePath()..'/src/main.lua','r');"+
-                "local obj = require('test3');print(obj.name);obj.hw()"
-        })
+
     })
     
     initDebugView.call(this);
@@ -61,6 +74,7 @@ function MainView(){
         }
     }
     dump_child.call(this,this,function(node){
+        if(!node.name) return;
         var arr = node.name.split(",")
         if(arr[0]=="r-div"||arr[0]=="c-div"){
             var isRowDiver = arr[0]=="r-div"
@@ -85,13 +99,31 @@ function MainView(){
             })
         }
     })
-
+    this.btnWinMin.on(Event.CLICK,this,function(){
+        thisWin.minimize()
+    })
+    var lastBounds;
+    this.btnWinMax.on(Event.CLICK,this,function(){
+        var img = this.btnWinMax.getChildAt(0);
+        var shouldmax = img.skin=="main/img_win_max.png"
+        img.skin = shouldmax?"main/img_win_resize.png":"main/img_win_max.png"
+        if(shouldmax){
+            lastBounds = thisWin.getBounds();
+            thisWin.maximize()
+        }else{
+            thisWin.setBounds(lastBounds,true)
+        }
+    })
+    this.btnWinClose.on(Event.CLICK,this,function(){
+        remote.getGlobal("app").quit()
+    })
 }
 Laya.class(MainView, "MainView", MainViewUI);
 
 Laya.init(1206, 750);
 Laya.stage.scaleMode = "full"
 Laya.stage.bgColor = "#121212"
+
 Laya.stage.on(laya.events.Event.KEY_DOWN,this,function(event){
     switch(event.keyCode){
     case 27:
@@ -112,8 +144,11 @@ Laya.stage.on(laya.events.Event.RESIZE,this,function(){
 function onAssetLoaded()
 {
     console.log("assets loaded...")    
-	Laya.stage.addChild(new MainView());
 
+    Laya.stage.timerOnce(3500,this,function(){
+        document.getElementById("loading").remove()
+	    Laya.stage.addChild(new MainView());
+    })
 }
 
 Laya.loader.load("res/atlas/main.json", Handler.create(this, onAssetLoaded), null, Loader.ATLAS,0);

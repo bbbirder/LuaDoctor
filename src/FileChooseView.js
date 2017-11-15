@@ -72,6 +72,7 @@
         })
         this.btnOk.on(Event.CLICK,this,function(){
             MyStorage["last_dir"] = this.inputPath.text
+            location.reload()
             this.close()
         })
         this.panMain.getChildByName("boxContainer").dataSource={x:-15,y:30};
