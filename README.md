@@ -17,9 +17,9 @@ Errors will be uploaded and shown in red.
 ### logs management
 You can filter, toggle and watch logs in details easily.
 ### real-time breakpoint
-There are two ways to make a break point:
+There are two ways to make a breakpoint:
 * modify source <br/>
-*&emsp;insert `LuaDoctor.BreakPoint();` into where you want to make a break point,such as:*
+*&emsp;insert `LuaDoctor.BreakPoint();` into where you want to make a breakpoint,such as:*
 ```lua
 function foo(...)
   ...
@@ -30,10 +30,10 @@ function foo(...)
 end
 ```
 * via console <br/>
-*&emsp;You can toggle break point on certain line by **clicking on line-number** of source code view*
+*&emsp;You can toggle breakpoint on certain line by **clicking on line-number** of source code view*
 
-when game enters break point,scoop information will be shown on console view, 
-and you can click continue button to pass the current break point.
+when game enters breakpoint,scoop information will be shown on console view, 
+and you can click continue button to pass the current breakpoint.
 ### fetch call stack traceback
 Every log can be located on certain line and you can either open third-part editor.
 ### fetch scoop
@@ -51,12 +51,12 @@ This is when you may meet troubles soon.
 
 LuaDoctor was designed for the common issues of mobile testing,which are listed as following:
 * hard to view real-time log
-* unable to make break point
+* unable to make breakpoint
 * unable to view call stack traceback
 * unable to view scoop information
 * unable to monitor real-time running state
 * unable to eval a testing script and gain the useful result
-* must build&install game again when script edited
+* must build&install project again every time script modified
 ## Tutorial
 Only several steps needed to start the wonderful debugging experience.
 
