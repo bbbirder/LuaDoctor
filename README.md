@@ -9,7 +9,7 @@ will support:
 * cocos-js
 * unity-lua
 * unity-js
-## Ablities
+## Abilities
 ### real-time log report
 Logs will be uploaded into console view when game is running on mobile phone.
 ### error recognize
