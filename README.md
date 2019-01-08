@@ -87,4 +87,4 @@ oicq:502100554
 
 wechat:bbbirder
 
-email:lzy@syujoy.com
+email:502100554@qq.com
